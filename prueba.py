@@ -1,6 +1,13 @@
+tablero = [[1,0,3],[4,5,6],[7,8,9]]
 
-lista = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+def verificar(tablero, x):
+    for fila in tablero:
+        if x in fila:
+            return "yes"
+    return "no"
 
-nuevo = [[ "x" if num == 5 else num for num in fila] for fila in lista]
+num = int(input())
 
-print(nuevo)
+print(verificar(tablero, num))
+
+#
