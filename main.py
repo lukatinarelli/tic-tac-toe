@@ -44,7 +44,28 @@ def maquina(tablero, turno):
     #else
         #...
 
+def jugador(tablero):
+    posicion = " "
 
+    while verificar_movimieno(tablero, posicion):
+        posicion = input("Introduce el número de la posición: ")
+
+
+def verificar_movimieno(tablero, posicion):
+    for fila in tablero:
+        for posiciones in fila:
+            print(posicion, "   ", posiciones)
+            if str(posicion) == str(posiciones):
+                return False
+    return True
+
+
+
+
+
+
+def verificar_ganador(tablero):
+    print(tablero)
 
 tablero = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 turno = 1
@@ -52,10 +73,9 @@ turno = 1
 while True:
     #tablero = maquina(tablero, turno)
     
-
-    """while True: #comprobar movimiento jugador
-        posicion = input("Posición: ")
-    tablero = jugar(tablero, posicion)"""
-
+    tablero = jugador(tablero)
 
     turno+=1
+
+
+#
