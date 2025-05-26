@@ -44,9 +44,9 @@ def maquina(tablero, turno):
         if registro[-1] in [2, 4, 6, 8]:
             return jugar(tablero, random.choice([1, 3, 7, 9]), jugador1)
         else:
-            return jugar(tablero, random.choice([1, 2, 3, 4, 5, 6, 7, 8, 9]), jugador1)
+            return jugar(tablero, random.randint(1,9), jugador1)
     else:
-        return jugar(tablero, random.choice([1, 2, 3, 4, 5, 6, 7, 8, 9]), jugador1)
+        return jugar(tablero, random.randint(1,9), jugador1)
     #turno 2 de la maquina (turno 3) 
     # -si el jugador va a una arista, poner x en cualquien esquina y gana auto
     # -si el jugador va a una esquina: poner x en 
